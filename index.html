@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 
@@ -35,14 +36,22 @@
   <header class="hero" id="top">
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <p class="eyebrow">Toronto, ON</p>
-      <h1>Sepehr <span>Nafissi</span></h1>
-      <p class="hero-role">FP&amp;A &nbsp;·&nbsp; Business Intelligence &nbsp;·&nbsp; Strategy &amp; Operations</p>
-      <p class="hero-lede">I write the SQL, build the dashboards, and explain what the numbers mean to the people running the business.</p>
+      <div class="hero-text">
+      <p class="pill"><span class="dot"></span>Toronto · FP&amp;A, BI &amp; Strategy</p>
+      <h1>Hi, I’m <span class="grad">Sepehr.</span></h1>
+      <p class="hero-lede">Part finance person, part SQL person, full-time <em>“why doesn’t this tie?”</em> investigator.</p>
+      <p class="hero-sub">I build the dashboards leadership actually opens, then explain what the numbers mean before anyone has to ask.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#databricks">View dashboards</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/sepehrnafissi/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="mailto:sepehr.nafissi@gmail.com">Email</a>
+      </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="art-back" src="images/db_revenue_arpu.jpg" alt="" />
+        <img class="art-front" src="images/db_mix_volume.jpg" alt="" />
+        <div class="art-chip chip-a"><b>15+</b> dashboards live</div>
+        <div class="art-chip chip-b"><b>Up to 60%</b> faster month-end</div>
       </div>
     </div>
   </header>
@@ -51,19 +60,22 @@
   <section class="section about" id="about">
     <div class="container about-grid">
       <div>
-        <p class="kicker">About</p>
-        <h2>From data to decision</h2>
+        <p class="kicker">About me</p>
+        <h2>I like the whole trip, from raw data to a decision.</h2>
         <p class="bio">
-          Finance and analytics professional who works the full path from data to decision. As a
-          <strong>Senior Analyst in Forecasting &amp; Planning at Xplore</strong>, I build and maintain
-          <strong>15+ Databricks and Power BI dashboards</strong> on subscriber, churn, ARPU and revenue data,
-          and lead a daily cross-functional session with Data Science to keep metrics reliable as source data changes.
+          Right now I’m a <strong>Senior Analyst in Forecasting &amp; Planning at Xplore</strong>. I build and look after
+          <strong>15+ Databricks and Power BI dashboards</strong> on subscribers, churn, ARPU and revenue. When the source
+          tables change overnight (they do, a lot), I’m the one fixing the SQL before the 9 a.m. meeting. Every morning I also
+          run a quick session with Data Science so broken numbers get fixed instead of quietly shared.
         </p>
         <p class="bio">
-          Before that, I progressed from Accounts Payable to <strong>Finance Manager, FP&amp;A at WPP Media</strong>,
-          managing close, budgets and forecasts for 5+ business units and cutting the month-end reporting cycle by up to 60%.
-          I also design AI-assisted automation workflows in <strong>n8n</strong> and <strong>Claude</strong>, always with
-          human validation built in.
+          I started in Accounts Payable at <strong>WPP Media</strong> and worked my way up to <strong>Finance Manager, FP&amp;A</strong>,
+          running close, budgets and forecasts for 5+ business units. Along the way I cut our month-end reporting time by up to 60%,
+          which made a lot of people happier on the last day of the month.
+        </p>
+        <p class="bio">
+          Outside work hours, I build automations in <strong>n8n</strong> and <strong>Claude</strong>. The AI does the boring
+          parts; I still check every number.
         </p>
         <div class="tags">
           <span>SQL</span><span>Databricks</span><span>Power BI (DAX)</span><span>Excel</span>
@@ -72,10 +84,10 @@
         </div>
       </div>
       <div class="stats">
-        <div class="stat"><b>15+</b><span>executive dashboards in Databricks &amp; Power BI</span></div>
-        <div class="stat"><b>Up to 60%</b><span>faster month-end reporting cycle</span></div>
-        <div class="stat"><b>5+</b><span>business units supported in FP&amp;A</span></div>
-        <div class="stat"><b>150+</b><span>node automation workflow built in n8n</span></div>
+        <div class="stat reveal"><b>15+</b><span>executive dashboards in Databricks &amp; Power BI</span></div>
+        <div class="stat reveal"><b>Up to 60%</b><span>faster month-end reporting cycle</span></div>
+        <div class="stat reveal"><b>5+</b><span>business units supported in FP&amp;A</span></div>
+        <div class="stat reveal"><b>150+</b><span>node automation workflow built in n8n</span></div>
       </div>
     </div>
   </section>
@@ -84,10 +96,10 @@
   <section class="section alt" id="databricks">
     <div class="container">
       <p class="kicker">Databricks dashboards</p>
-      <h2>Subscription analytics, built on SQL</h2>
-      <p class="section-sub">Dashboards for subscriber, plan-change, revenue and conversion reporting, built in Databricks on SQL datasets and kept accurate as upstream tables and business rules change.</p>
+      <h2>Dashboards people actually open</h2>
+      <p class="section-sub">Subscriber, pricing, revenue and funnel reporting I build in Databricks on top of my own SQL, and keep working while the data underneath keeps moving.</p>
 
-      <article class="featured">
+      <article class="featured reveal">
         <div class="featured-media">
           <div class="toggle" role="tablist" aria-label="Display mode">
             <span class="toggle-label">Display mode</span>
@@ -101,7 +113,7 @@
         <div class="featured-body">
           <div class="badges"><span class="badge db">Databricks</span><span class="badge muted">Featured</span></div>
           <h3>Subscriber Activity: Volume / Mix % Report</h3>
-          <p>One dashboard, two lenses. A <strong>display-mode parameter</strong> switches every visual between raw volume and mix %, so leaders can see both how much changed and how the mix shifted, without a second report. Try the toggle.</p>
+          <p>Leaders kept asking two questions: <em>how many?</em> and <em>what share?</em> Instead of building two reports, I added a <strong>display-mode switch</strong> that flips every chart between volume and mix %. Go ahead, try the toggle.</p>
           <ul class="checks">
             <li>Volume / Mix % parameter driving all charts</li>
             <li>Gross adds and installs by product line</li>
@@ -112,39 +124,39 @@
       </article>
 
       <div class="grid">
-        <article class="card">
+        <article class="card reveal">
           <button class="img-btn" data-full="images/db_plan_changes.jpg" data-title="Plan Changes | Price Impact Analysis"><img src="images/db_plan_changes.jpg" alt="Plan changes and price impact dashboard" loading="lazy" /></button>
           <div class="card-body">
             <div class="badges"><span class="badge db">Databricks</span><span class="cat">Pricing &amp; Plan Mix</span></div>
             <h3>Plan Changes &amp; Price Impact</h3>
-            <p>Classifies every plan change as accretive, dilutive or neutral and sizes the monthly price impact, by product and province.</p>
+            <p>Every time a customer changes plans, did we gain or lose money? This one sorts each change into up, down or neutral and adds up the price impact.</p>
             <ul class="checks"><li>Change-type classification in SQL</li><li>Upgrade / downgrade rate KPI tiles</li><li>Product-level trend for planning discussions</li></ul>
           </div>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <button class="img-btn" data-full="images/db_revenue_arpu.jpg" data-title="Revenue &amp; ARPU | Executive Summary"><img src="images/db_revenue_arpu.jpg" alt="Revenue and ARPU executive summary dashboard" loading="lazy" /></button>
           <div class="card-body">
             <div class="badges"><span class="badge db">Databricks</span><span class="cat">Revenue &amp; ARPU</span></div>
             <h3>Revenue &amp; ARPU Executive Summary</h3>
-            <p>A one-page view for senior leadership: active base, blended ARPU, revenue vs. budget, and revenue mix by product and speed tier.</p>
+            <p>The one-pager for leadership: how many customers we have, what they pay on average, and how we’re doing against budget.</p>
             <ul class="checks"><li>Headline KPI tiles with budget comparison</li><li>ARPU trend by product line</li><li>Product and speed-tier mix</li></ul>
           </div>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <button class="img-btn" data-full="images/db_net_adds_churn.jpg" data-title="Net Adds &amp; Churn | Subscriber Bridge"><img src="images/db_net_adds_churn.jpg" alt="Net adds and churn subscriber bridge dashboard" loading="lazy" /></button>
           <div class="card-body">
             <div class="badges"><span class="badge db">Databricks</span><span class="cat">Subscribers &amp; Churn</span></div>
             <h3>Net Adds &amp; Churn Bridge</h3>
-            <p>Bridges gross adds, disconnects and migrations into net adds each month, then breaks churn down by reason and product.</p>
+            <p>Customers in, customers out, and what’s left over each month, plus <em>why</em> people leave and which products churn most.</p>
             <ul class="checks"><li>Monthly subscriber bridge with net adds line</li><li>Disconnects by reason</li><li>Churn rate by product</li></ul>
           </div>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <button class="img-btn" data-full="images/db_conversion.jpg" data-title="Lead-to-Install Conversion | Funnel Tracker"><img src="images/db_conversion.jpg" alt="Lead to install conversion funnel dashboard" loading="lazy" /></button>
           <div class="card-body">
             <div class="badges"><span class="badge db">Databricks</span><span class="cat">Funnel &amp; Conversion</span></div>
             <h3>Lead-to-Install Conversion Tracker</h3>
-            <p>Tracks conversion from lead to install by channel and product, with YTD summary tables for weekly and monthly reviews.</p>
+            <p>Of all the people who showed interest, how many actually got installed? Split by channel and product for the weekly review.</p>
             <ul class="checks"><li>Channel and product conversion trends</li><li>Blended and trailing conversion rate</li><li>YTD summary tables with grand totals</li></ul>
           </div>
         </article>
@@ -156,18 +168,18 @@
   <section class="section" id="sql">
     <div class="container sql-grid">
       <div>
-        <p class="kicker">How it's built</p>
-        <h2>The SQL behind the dashboards</h2>
-        <p class="section-sub left">Each dashboard sits on SQL I write and maintain. This simplified example shows the pattern behind the plan-change and Volume / Mix % views:</p>
+        <p class="kicker">Under the hood</p>
+        <h2>Yes, I write the SQL myself.</h2>
+        <p class="section-sub left">No waiting in a ticket queue for someone else to pull the data. Here’s a simplified version of the query pattern behind the plan-change and Volume / Mix % views:</p>
         <ul class="checks">
           <li><b>CASE mapping</b> rolls raw product codes into reporting product lines</li>
           <li><b>Conditional aggregation</b> splits changes by type in one pass</li>
           <li><b>Window functions</b> calculate mix % within each month</li>
           <li><b>Partial-month exclusion</b> keeps trends comparable</li>
         </ul>
-        <p class="note">Table and column names are illustrative.</p>
+        <p class="note">Table and column names changed to protect the innocent.</p>
       </div>
-      <div class="code-window">
+      <div class="code-window reveal">
         <div class="code-bar"><i></i><i></i><i></i><span>plan_changes_mix.sql</span></div>
 <pre><code id="sqlCode">-- Plan changes by product line, with volume and mix %
 WITH changes AS (
@@ -211,9 +223,9 @@ ORDER BY month, product_line;</code></pre>
   <section class="section alt" id="automation">
     <div class="container">
       <p class="kicker">Automation &amp; AI</p>
-      <h2>An end-to-end n8n workflow</h2>
-      <p class="section-sub">An independent project: a 150+ node pipeline that runs on a schedule, uses LLMs with validation checks at every step, and logs each run.</p>
-      <article class="featured wide">
+      <h2>Because copy-paste is not a career plan.</h2>
+      <p class="section-sub">A side project that got a little out of hand: a 150+ node n8n pipeline that runs on its own schedule, uses AI with checks at every step, and keeps a log of everything it does.</p>
+      <article class="featured wide reveal">
         <button class="img-btn" data-full="images/n8n_workflow.jpg" data-title="n8n Automation Workflow (simplified)"><img src="images/n8n_workflow.jpg" alt="Simplified n8n automation workflow" loading="lazy" /></button>
         <div class="pipeline">
           <div><b>1</b><h4>Trigger &amp; intake</h4><p>Scheduled trigger reads the next item from a Google Sheets queue and stops cleanly when there is nothing to process.</p></div>
@@ -221,7 +233,7 @@ ORDER BY month, product_line;</code></pre>
           <div><b>3</b><h4>Parallel processing</h4><p>Branches call external APIs, run vision-based relevance checks, convert files and upload them to cloud storage with QC.</p></div>
           <div><b>4</b><h4>Retries &amp; run log</h4><p>Status polling, retry with backoff, failure alerts, and a run log that records every step for traceability.</p></div>
         </div>
-        <p class="note center">Simplified recreation; node names generalized.</p>
+        <p class="note center">Simplified recreation. The real one is messier, like all real ones.</p>
       </article>
     </div>
   </section>
@@ -229,11 +241,11 @@ ORDER BY month, product_line;</code></pre>
   <!-- FINANCE BI -->
   <section class="section" id="finance">
     <div class="container">
-      <p class="kicker">Finance BI</p>
-      <h2>FP&amp;A reporting in Power BI &amp; Tableau</h2>
-      <p class="section-sub">Finance dashboards for month-end, reforecast and net sales reporting, the kind of views I built for CFO and VP Finance reviews.</p>
+      <p class="kicker">Where it started</p>
+      <h2>Finance reporting, minus the 40-tab spreadsheet</h2>
+      <p class="section-sub">The kind of month-end, reforecast and net sales views I built for CFO and VP Finance reviews, recreated with made-up numbers.</p>
       <div class="grid three">
-        <article class="card">
+        <article class="card reveal">
           <button class="img-btn" data-full="images/pbi_variance_reforecast.jpg" data-title="Forecast Attainment &amp; Variance vs Reforecast"><img src="images/pbi_variance_reforecast.jpg" alt="Forecast attainment and variance vs reforecast Power BI dashboard" loading="lazy" /></button>
           <div class="card-body">
             <div class="badges"><span class="badge pbi">Power BI</span><span class="cat">Forecasting &amp; Variance</span></div>
@@ -241,7 +253,7 @@ ORDER BY month, product_line;</code></pre>
             <p>Actuals vs. quarterly reforecast with an attainment gauge, a waterfall by business unit, and top and bottom variance drivers.</p>
           </div>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <button class="img-btn" data-full="images/pbi_netsales_clients.jpg" data-title="Net Sales by Unit &amp; Client Concentration"><img src="images/pbi_netsales_clients.jpg" alt="Net sales by unit and client concentration Power BI dashboard" loading="lazy" /></button>
           <div class="card-body">
             <div class="badges"><span class="badge pbi">Power BI</span><span class="cat">Revenue Intelligence</span></div>
@@ -249,7 +261,7 @@ ORDER BY month, product_line;</code></pre>
             <p>Net sales by business unit, top clients by share of total, concentration gauges, and a trendline vs. prior year.</p>
           </div>
         </article>
-        <article class="card">
+        <article class="card reveal">
           <button class="img-btn" data-full="images/tableau_retail_sales.png" data-title="Sales &amp; Performance Analysis"><img src="images/tableau_retail_sales.png" alt="Tableau sales and performance analysis dashboard" loading="lazy" /></button>
           <div class="card-body">
             <div class="badges"><span class="badge tab">Tableau</span><span class="cat">Sales Analysis</span></div>
@@ -265,13 +277,13 @@ ORDER BY month, product_line;</code></pre>
   <section class="section alt" id="experience">
     <div class="container">
       <p class="kicker">Experience</p>
-      <h2>Career path</h2>
+      <h2>How I got here</h2>
       <ol class="timeline">
-        <li><span class="when">May 2026 – Present</span><h4>Senior Analyst, Forecasting &amp; Planning</h4><p class="org">Xplore Inc.</p><p>Forecast inputs, 15+ SQL-based dashboards and executive performance reporting across Fibre, Fixed Wireless/5G and Satellite.</p></li>
-        <li><span class="when">Jan 2026 – May 2026</span><h4>Finance Manager, FP&amp;A</h4><p class="org">WPP Media</p><p>FP&amp;A for 5+ business units; month-end reporting cycle cut by up to 60%.</p></li>
-        <li><span class="when">May 2024 – Dec 2025</span><h4>Financial Analyst, FP&amp;A</h4><p class="org">WPP Media</p><p>Month-end close, accruals, reconciliations, budgets and reforecasts.</p></li>
-        <li><span class="when">Oct 2023 – May 2024</span><h4>Accounting Analyst, Accounts Payable</h4><p class="org">WPP Media</p><p>High-volume invoice processing and reconciliation.</p></li>
-        <li><span class="when">2022 – 2023</span><h4>MBA, Finance &amp; Accounting</h4><p class="org">University of Windsor</p></li>
+        <li class="reveal"><span class="when">May 2026 – Present</span><h4>Senior Analyst, Forecasting &amp; Planning</h4><p class="org">Xplore Inc.</p><p>Forecast inputs, 15+ SQL-based dashboards and executive performance reporting across Fibre, Fixed Wireless/5G and Satellite.</p></li>
+        <li class="reveal"><span class="when">Jan 2026 – May 2026</span><h4>Finance Manager, FP&amp;A</h4><p class="org">WPP Media</p><p>FP&amp;A for 5+ business units; month-end reporting cycle cut by up to 60%.</p></li>
+        <li class="reveal"><span class="when">May 2024 – Dec 2025</span><h4>Financial Analyst, FP&amp;A</h4><p class="org">WPP Media</p><p>Month-end close, accruals, reconciliations, budgets and reforecasts.</p></li>
+        <li class="reveal"><span class="when">Oct 2023 – May 2024</span><h4>Accounting Analyst, Accounts Payable</h4><p class="org">WPP Media</p><p>High-volume invoice processing and reconciliation.</p></li>
+        <li class="reveal"><span class="when">2022 – 2023</span><h4>MBA, Finance &amp; Accounting</h4><p class="org">University of Windsor</p></li>
       </ol>
     </div>
   </section>
@@ -279,8 +291,8 @@ ORDER BY month, product_line;</code></pre>
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container contact-inner">
-      <h2>Let's talk</h2>
-      <p>Open to FP&amp;A, Strategy &amp; Operations and BI roles in Toronto and across Canada.</p>
+      <h2>Let’s talk numbers.</h2>
+      <p>Or anything else, really. I’m open to FP&amp;A, Strategy &amp; Operations and BI roles in Toronto and across Canada.</p>
       <div class="hero-actions center">
         <a class="btn btn-primary light" href="mailto:sepehr.nafissi@gmail.com">sepehr.nafissi@gmail.com</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/sepehrnafissi/" target="_blank" rel="noopener">LinkedIn</a>
@@ -290,7 +302,7 @@ ORDER BY month, product_line;</code></pre>
 
   <footer class="footer">
     <div class="container">
-      <p>All dashboards shown are recreations built with synthetic data. Names and figures are illustrative and do not represent any employer's results.</p>
+      <p>Every dashboard here is rebuilt with made-up data. The real numbers stay with the people who own them.</p>
       <p>© 2026 Sepehr Nafissi</p>
     </div>
   </footer>
@@ -304,6 +316,6 @@ ORDER BY month, product_line;</code></pre>
     </figure>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

@@ -58,3 +58,11 @@ if (code) {
     return m;
   });
 }
+
+// Fade-in on scroll
+const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+  entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }) : null;
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  if (io) { el.style.transitionDelay = `${(i % 3) * 80}ms`; io.observe(el); } else el.classList.add('in');
+});
